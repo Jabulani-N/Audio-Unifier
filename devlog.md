@@ -1,5 +1,6 @@
  - [x] find a library that converts an audio file
  * `pydub` from https://pydub.com
+   * this seems to need ffmpeg installed to the current env, so it won't be portable if I use it. I'll use the same lib I used in video conversion.
 
 for some reason creating the linux python venv was annoying, so i'm linking how I did it for future troubleshooting: https://python.land/virtual-environments/virtualenv#Python_venv_activation
 
