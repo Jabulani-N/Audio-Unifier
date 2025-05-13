@@ -18,6 +18,7 @@ Planning space and tasklist.
     - [07](#07)
     - [08](#08)
     - [09](#09)
+    - [Extra](#extra)
 
 ## Preliminary research
 
@@ -83,3 +84,9 @@ for some reason creating the linux python venv was annoying, so i'm linking how 
 ### 09
 
 - [ ] copy format from vid2aud gui to map out remaining steps
+
+### Extra
+
+  - [ ] make it possible to choose `preset` for encoder speed.
+    - moviepy default is medium.
+    - I'd like to usually use `veryslow`, but other users may not
