@@ -2,12 +2,12 @@
 """
 largely reuses code from vid2aud's named vid to aud
 
-following documentation not yet updated
-vvvvv
-converts one mp4 video file to m4a audio,
+
+converts one named audio or video video file into
+    any audio format that uses aac encoding,
 given:
 
-    source vid name
+    source medium name
     source location directory
     desired output name
     output destination directory
@@ -22,14 +22,14 @@ import os
 import sys
 
 
-def named_aud_to_aud(input_vid_name, output_aud_name,
+def named_aud_to_aac(input_vid_name, output_aud_name,
                      source_loc='./input/',
                      save_loc='./output/'):
     """
     take an input aud name
     take output aud name
 
-    have moviepy turn the audiofileclip into an mp3
+    have moviepy turn the audiofileclip into an aac format
     """
 
     print("converter args recieved:")
@@ -78,5 +78,5 @@ and automatically.\
     aud_file_to_give = input("what will you name the converted file?: ")
     print("you want to take",aud_file_to_take,
           "and give audio file", aud_file_to_give)
-    named_aud_to_aud(aud_file_to_take,
+    named_aud_to_aac(aud_file_to_take,
                      aud_file_to_give)
