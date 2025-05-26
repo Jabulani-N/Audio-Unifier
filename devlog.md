@@ -39,10 +39,12 @@ for some reason creating the linux python venv was annoying, so i'm linking how 
 - [ ] copy format from `named vid 2 m4a` from `vid2aud` repo to make it take a given SINGLE FILE input and convert it to a PROVIDED FILETYPE
   - [ ] script that takes any filetype and converts it to one
     - [ ] mp3
+      - [ ] `libmp3lame` codec
     - [x] m4a
+      - [x] `aac` codec
     - [ ] wav
       - fluff. it's really worthless to convert *into* a `.wav` file, but we can have it for completion's sake.
-      - "`pcm_s16le` for 16-bit wav and `pcm_s32le` for 32-bit wav."
+      - "`pcm_s16le` codec for 16-bit wav and `pcm_s32le` for 32-bit wav."
     - [ ] ogg
       - vorbis audio codec. [moviepy uses `libvorbis`](https://zulko.github.io/moviepy/reference/reference/moviepy.video.VideoClip.VideoClip.html)
 
