@@ -51,9 +51,12 @@ for some reason creating the linux python venv was annoying, so i'm linking how 
 
 ### 02
 
-  - [ ] script that takes the "endswith" and uses it to identify which converter script to send it to
-        - we have one in vid2aud
-        - just apply it as a new phrase in input to output
+  - [ ] copy and update input to output
+    - [ ] update will:
+      - [ ] add a slot to recieve `target_format`
+      - [ ] update `vid_types` to be a list of ffmpeg-enabled extensions (make it default to all of them), and then say `vid_types = vid_types[except indices containing the target format]`
+      - [ ] duplicate `converter` to one to import each `ffmpeg_to_[format]` script
+        -  for example, there will be a `converter_mp3` that = `ffmpeg_to_libmp3lame_codex`, and a `converter_m4a` that = `ffmpeg_to_aac_codec`
 
 ### 03
 
