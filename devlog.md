@@ -39,8 +39,8 @@ for some reason creating the linux python venv was annoying, so i'm linking how 
 - [ ] copy format from `named vid 2 m4a` from `vid2aud` repo to make it take a given SINGLE FILE input and convert it to a PROVIDED FILETYPE
       - [ ] we have one that works, so copypaste it and change where needed. new file for easier testing
   - [ ] script that takes any filetype and converts it to one
-    - [ ] mp3
-      - [ ] `libmp3lame` codec
+    - [x] mp3
+      - [x] `libmp3lame` codec
     - [x] m4a
       - [x] `aac` codec
     - [ ] wav
