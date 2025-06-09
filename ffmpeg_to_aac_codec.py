@@ -66,12 +66,13 @@ if __name__ == '__main__':
     # running as main prompts user for vid name
     print("you are running a test for the named\
 audio to audio file conversion system!\
+\nThis script is intended to encode files into m4a audio.\
 \n\nYou'll be prompted to enter the name\
 of the input file, extension included, \
-and then what you want hte output file to be named.\
+and then what you want the output file to be named.\
 \n\nThis is purely funtionality for debugging.\
-\nNormally, you won't actually be able to see\
-this method work, as it'll be getting called internally\
+\nNormally, you won't actually be able to see \
+this method at work, as it'll be getting called internally \
 and automatically.\
 \n\nGood luck!\n\n  -- Jabulani Ndhlovu")
     aud_file_to_take = input("what audio file will you convert?: ")
