@@ -29,7 +29,7 @@ def named_aud_to_aac(input_vid_name, output_aud_name,
     take an input aud name
     take output aud name
 
-    have moviepy turn the audiofileclip into an aac format
+    have moviepy turn the audiofileclip into an libmp3lame format
     """
 
     print("converter args recieved:")

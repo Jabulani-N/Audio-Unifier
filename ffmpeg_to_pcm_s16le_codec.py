@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """
-Largely reuses code from ffmpeg to aac
+Largely reuses code from ffmpeg to libvorbis
 
 
 converts one named audio or video video file into
-    any audio format that uses libvorbis encoding,
+    any audio format that uses pcm_s16le encoding,
 given:
 
     source medium name
@@ -29,7 +29,7 @@ def named_aud_to_aac(input_vid_name, output_aud_name,
     take an input aud name
     take output aud name
 
-    have moviepy turn the audiofileclip into an libvorbis format
+    have moviepy turn the audiofileclip into an pcm_s16le format
     """
 
     print("converter args recieved:")
@@ -39,7 +39,9 @@ def named_aud_to_aac(input_vid_name, output_aud_name,
     print("save loc:", save_loc)
     in_aud_file = source_loc + input_vid_name
     out_aud_file = save_loc + output_aud_name
-    output_codec = "libvorbis" # libvorbis is used in ogg files
+    # pcm_s16le is used in 16-bit wav files
+    # a different codec, pcm_s32le is used in 32-bit wav files
+    output_codec = "pcm_s16le"
 
     print("varibles declared:")
     print("source file is", in_aud_file, "from", source_loc)
@@ -66,7 +68,7 @@ if __name__ == '__main__':
     # running as main prompts user for vid name
     print("you are running a test for the named\
 audio to audio file conversion system!\
-\n\nThis one tests conversion of ffmpeg-compatible files into ogg\
+\n\nThis one tests conversion of ffmpeg-compatible files into 16-bit WAV\
 \n\nYou'll be prompted to enter the name\
 of the input file, extension included, \
 and then what you want the output file to be named.\
