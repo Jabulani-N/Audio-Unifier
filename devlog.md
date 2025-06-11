@@ -45,7 +45,7 @@ for some reason creating the linux python venv was annoying, so i'm linking how 
       - [x] `aac` codec
     - [ ] wav
       - fluff. it's really worthless to convert *into* a `.wav` file, but we can have it for completion's sake.
-      - "`pcm_s16le` codec for 16-bit wav and `pcm_s32le` for 32-bit wav."
+      - "`pcm_s16le` codec for 16-bit wav and `****pcm_s32**le**` for 32-bit wav."
     - [x] ogg
       - vorbis audio codec. [moviepy uses `libvorbis`](https://zulko.github.io/moviepy/reference/reference/moviepy.video.VideoClip.VideoClip.html)
 
@@ -55,7 +55,7 @@ for some reason creating the linux python venv was annoying, so i'm linking how 
     - [ ] update will:
       - [ ] add a slot to recieve `target_format`
       - [ ] update `vid_types` to be a list of ffmpeg-enabled extensions (make it default to all of them), and then say `vid_types = vid_types[where except indices containing  target_format]`
-        - `vid_types = [".mp3", ".wav", ".aac", ".flac", ".ogg", ".wma", ".raw", ".m4a"]`
+        - `vid_types = [".mp3", ".wav", ".aac", ".flac", ".ogg", ".wma", ".raw", ".m4a", ".opus"]`
       - [ ] duplicate `converter` to one to import each `ffmpeg_to_[format]` script
         -  for example, there will be a `converter_mp3` that = `ffmpeg_to_libmp3lame_codex`, and a `converter_m4a` that = `ffmpeg_to_aac_codec`
 
