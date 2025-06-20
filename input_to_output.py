@@ -34,7 +34,11 @@ def extract_from_dir(input_dir="./input/", output_dir="./output/",
     and put it in the designated or default output dir
     you could even put them in the source dir if you want
     """
-    types_of_input_file = [".mp4"]
+    types_of_input_file = [".mp3", ".wav", ".aac", ".flac", ".ogg", ".wma", ".raw", ".m4a", ".opus"]
+    vid_formats = [".mp4", ".mov"]
+    if include_vids:
+        for vid_format in vid_formats:
+            types_of_input_file.append(vid_format)
     target_vid_titles = np.array([])
     subdirs = list_subdirs(input_dir)
 
