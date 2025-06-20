@@ -19,7 +19,7 @@ import numpy as np
 from pathlib import Path
 
 list_files = __import__('list_files_in_folder').list_files
-# converter = __import__('named_vid_to_m4a').named_vid_to_m4a
+# we don't yet know which converter we'll use, so we import all
 converter_to_mp3 = __import__('ffmpeg_to_libmp3lame_codec.py').named_aud_to_libmp3lame
 converter_to_m4a = __import__('ffmpeg_to_aac_codec').named_adu_to_aac
 converter_to_wav = __import__('ffmpeg_to_pcm_s16le_codec.py').named_aud_to_pcm16
@@ -53,7 +53,6 @@ def extract_from_dir(input_dir="./input/", output_dir="./output/",
     target_vid_titles = target_vid_titles.flatten()
     print("All file types collected.\nTotal list of files to be converted:", target_vid_titles)
 
-    # have imported all converters
     # choose which converter to use based on target format
     if target_format.casefold() == ".mp3".casefold():
         converter = converter_to_mp3
