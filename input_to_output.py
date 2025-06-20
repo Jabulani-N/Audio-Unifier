@@ -64,7 +64,8 @@ def extract_from_dir(input_dir="./input/", output_dir="./output/",
     elif target_format.casefold() == ".ogg".casefold():
         converter = converter_to_ogg
     else:
-        raise ValueError("Invalid output format selected.")
+        raise ValueError("Invalid output target format selected.")
+
     # run the chosen converter on every target file
     for vid_name_full in target_vid_titles:
         vid_name_stem = Path(vid_name_full).stem
