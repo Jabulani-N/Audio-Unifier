@@ -20,7 +20,10 @@ from pathlib import Path
 
 list_files = __import__('list_files_in_folder').list_files
 # converter = __import__('named_vid_to_m4a').named_vid_to_m4a
-converter_to_mp3 = __import__('ffmpeg_to_libmp3lame_codec.py').
+converter_to_mp3 = __import__('ffmpeg_to_libmp3lame_codec.py').named_aud_to_libmp3lame
+converter_to_m4a = __import__('ffmpeg_to_aac_codec').named_adu_to_aac
+converter_to_wav = __import__('ffmpeg_to_pcm_s16le_codec.py').named_aud_to_pcm16
+converter_to_ogg = __import__('ffmpeg_to_libvorbis_codec.py').named_aud_to_libvorbis
 list_subdirs = __import__('list_folders_in_folder').list_dirs
 
 
@@ -52,8 +55,16 @@ def extract_from_dir(input_dir="./input/", output_dir="./output/",
 
     # have imported all converters
     # choose which converter to use based on target format
-    if target_format.casefold() == "m4a".casefold():
-        converter = 
+    if target_format.casefold() == ".mp3".casefold():
+        converter = converter_to_mp3
+    elif target_format.casefold() == ".m4a".casefold():
+        converter = converter_to_m4a
+    elif target_format.casefold() == ".wav".casefold():
+        converter = converter_to_wav
+    elif target_format.casefold() == ".ogg".casefold():
+        converter = converter_to_ogg
+    else:
+        raise ValueError("Invalid output format selected.")
     # run the chosen converter on every target file
     for vid_name_full in target_vid_titles:
         vid_name_stem = Path(vid_name_full).stem
