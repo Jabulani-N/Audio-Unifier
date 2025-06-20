@@ -18,13 +18,13 @@ user inputs to add for execution selection - these go in GUI
 import numpy as np
 from pathlib import Path
 
+list_subdirs = __import__('list_folders_in_folder').list_dirs
 list_files = __import__('list_files_in_folder').list_files
 # we don't yet know which converter we'll use, so we import all
-converter_to_mp3 = __import__('ffmpeg_to_libmp3lame_codec.py').named_aud_to_libmp3lame
-converter_to_m4a = __import__('ffmpeg_to_aac_codec').named_adu_to_aac
-converter_to_wav = __import__('ffmpeg_to_pcm_s16le_codec.py').named_aud_to_pcm16
-converter_to_ogg = __import__('ffmpeg_to_libvorbis_codec.py').named_aud_to_libvorbis
-list_subdirs = __import__('list_folders_in_folder').list_dirs
+converter_to_mp3 = __import__('ffmpeg_to_libmp3lame_codec').named_aud_to_libmp3lame
+converter_to_m4a = __import__('ffmpeg_to_aac_codec').named_aud_to_aac
+converter_to_wav = __import__('ffmpeg_to_pcm_s16le_codec').named_aud_to_pcm16
+converter_to_ogg = __import__('ffmpeg_to_libvorbis_codec').named_aud_to_libvorbis
 
 
 def extract_from_dir(input_dir="./input/", output_dir="./output/",
@@ -40,6 +40,7 @@ def extract_from_dir(input_dir="./input/", output_dir="./output/",
         for vid_format in vid_formats:
             types_of_input_file.append(vid_format)
     target_vid_titles = np.array([])
+    failed_files = []
     subdirs = list_subdirs(input_dir)
 
     # if there are subdirs, do them first
@@ -77,8 +78,18 @@ def extract_from_dir(input_dir="./input/", output_dir="./output/",
         print("sending '", vid_name_full, "' in '", input_dir, "' to", converter)
         print("to ask", converter, "to make '", output_aud_file_name, "' in", output_dir)
         print("type of file name full is", type(vid_name_full))
-        converter(vid_name_full, output_aud_file_name, input_dir, output_dir)
+        failed_files.append(converter(vid_name_full, output_aud_file_name, input_dir, output_dir))
+
+    # if list of failures is empty
+    if not failed_files:
+        print("All conversions were successful!")
+    else:
+        print("\n\nThe following files failed to be converted and were skipped:\n")
+        for failure in failed_files:
+            if failure is not None:
+                print(failure)
+        print("")
 
 if __name__ == '__main__':
-    """runs the converter for vid to m4a conversion"""
+    """runs the converter for audio to m4a conversion"""
     extract_from_dir()

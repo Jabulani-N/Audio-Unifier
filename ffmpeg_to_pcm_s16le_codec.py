@@ -48,7 +48,12 @@ def named_aud_to_pcm16(input_vid_name, output_aud_name,
     print("create", out_aud_file, "in", save_loc)
 
     # import audio as AudioFileClip
-    orig_audio = AudioFileClip(in_aud_file)
+    try:
+        orig_audio = AudioFileClip(in_aud_file)
+    except OSError:
+        print("failed to import the file\n", in_aud_file,
+              "\nlikely due to MoviePy saying\n'At least one output file must be specified'")
+        return in_aud_file
     print("audio file imported as AudioFileClip without incident")
 
     # audio writing
