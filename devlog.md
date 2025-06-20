@@ -43,7 +43,7 @@ for some reason creating the linux python venv was annoying, so i'm linking how 
       - [x] `libmp3lame` codec
     - [x] m4a
       - [x] `aac` codec
-    - [ ] wav
+    - [x] wav
       - fluff. it's really worthless to convert *into* a `.wav` file, but we can have it for completion's sake.
       - "`pcm_s16le` codec for 16-bit wav and `****pcm_s32**le**` for 32-bit wav."
     - [x] ogg
