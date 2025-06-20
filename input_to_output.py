@@ -30,7 +30,7 @@ list_subdirs = __import__('list_folders_in_folder').list_dirs
 def extract_from_dir(input_dir="./input/", output_dir="./output/",
                      target_format=".m4a", include_vids=False):
     """
-    give it a dir, and it'll loop through each vid file within
+    give it a dir, and it'll loop through each input file within
     and put it in the designated or default output dir
     you could even put them in the source dir if you want
     """
