@@ -22,7 +22,7 @@ import os
 import sys
 
 
-def named_aud_to_aac(input_vid_name, output_aud_name,
+def named_aud_to_libvorbis(input_vid_name, output_aud_name,
                      source_loc='./input/',
                      save_loc='./output/'):
     """
@@ -79,5 +79,5 @@ and automatically.\
     aud_file_to_give = input("What will you name the converted file?: ")
     print("you want to take",aud_file_to_take,
           "and give audio file", aud_file_to_give)
-    named_aud_to_aac(aud_file_to_take,
+    named_aud_to_libvorbis(aud_file_to_take,
                      aud_file_to_give)

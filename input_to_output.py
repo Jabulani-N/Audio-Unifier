@@ -8,7 +8,8 @@ and convert them to selected format in output dir
 
 Uses recursion to make handle layered dirs.
 
-user inputs to add for execution selection
+DON'T DO THE BELOW IN THIS SCRIPT
+user inputs to add for execution selection - these go in GUI
 [ ] what output format do you want?
 [ ] do you want to create copies of any file already using that extension?
 [ ] do you want to convert video files to audio?
@@ -18,7 +19,8 @@ import numpy as np
 from pathlib import Path
 
 list_files = __import__('list_files_in_folder').list_files
-converter = __import__('named_vid_to_m4a').named_vid_to_m4a
+# converter = __import__('named_vid_to_m4a').named_vid_to_m4a
+converter_to_mp3 = __import__('ffmpeg_to_libmp3lame_codec.py').
 list_subdirs = __import__('list_folders_in_folder').list_dirs
 
 
