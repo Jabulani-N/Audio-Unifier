@@ -50,9 +50,9 @@ def extract_from_dir(input_dir="./input/", output_dir="./output/",
             extract_from_dir(input_subdir, output_subdir)
 
     for input_type in types_of_input_file:
-        print("about to add files of extension", input_type)
+        print("About to add files of extension:", input_type)
         target_vid_titles = np.append(target_vid_titles,(list_files(input_dir, input_type)))
-        print("just added files of extension", input_type)
+        print("Just added files of extension:", input_type)
 
     target_vid_titles = target_vid_titles.flatten()
     print("All file types collected.\nTotal list of files to be converted:", target_vid_titles)
@@ -70,12 +70,13 @@ def extract_from_dir(input_dir="./input/", output_dir="./output/",
         raise ValueError("Invalid output target format selected.")
 
     # run the chosen converter on every target file
+    # variables are named with "vid" because of reusing code.
     for vid_name_full in target_vid_titles:
         vid_name_stem = Path(vid_name_full).stem
-        output_aud_file_name = vid_name_stem + ".m4a"
-        print("sending '", vid_name_full, "' in '", input_dir, "' to converter")
-        print("to ask converter to make '", output_aud_file_name, "' in", output_dir)
-        print("type of vid name full is", type(vid_name_full))
+        output_aud_file_name = vid_name_stem + target_format
+        print("sending '", vid_name_full, "' in '", input_dir, "' to", converter)
+        print("to ask", converter, "to make '", output_aud_file_name, "' in", output_dir)
+        print("type of file name full is", type(vid_name_full))
         converter(vid_name_full, output_aud_file_name, input_dir, output_dir)
 
 if __name__ == '__main__':
