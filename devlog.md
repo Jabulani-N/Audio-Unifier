@@ -53,13 +53,13 @@ for some reason creating the linux python venv was annoying, so i'm linking how 
 
 ### 02
 
-  - [ ] copy and update `input_to_output.py`
-    - [ ] update will:
-      - [ ] add a slot to recieve `target_format`
-      - [ ] update `types_of_input_file` to be a list of ffmpeg-enabled extensions (make it default to all of them), and then say `types_of_input_file = types_of_input_file[where except indices containing  target_format]`
+  - [x] copy and update `input_to_output.py`
+    - [x] update will:
+      - [x] add a slot to recieve `target_format`
+      - [x] update `types_of_input_file` to be a list of ffmpeg-enabled extensions (make it default to all of them), and then say `types_of_input_file = types_of_input_file[where except indices containing  target_format]`
         - `types_of_input_file = [".mp3", ".wav", ".aac", ".flac", ".ogg", ".wma", ".raw", ".m4a", ".opus"]`
           - if the user wants to additionally extract audio from video files, append `[".mov", ".mp4"]` to `types_of_input_file` and flatten
-      - [ ] duplicate `converter` to one to import each `ffmpeg_to_[format]` script
+      - [x] duplicate `converter` to one to import each `ffmpeg_to_[format]` script
         -  for example, there will be a `converter_mp3` that = `ffmpeg_to_libmp3lame_codex`, and a `converter_m4a` that = `ffmpeg_to_aac_codec`
 
 ### 03
