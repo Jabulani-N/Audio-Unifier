@@ -61,6 +61,7 @@ for some reason creating the linux python venv was annoying, so i'm linking how 
           - if the user wants to additionally extract audio from video files, append `[".mov", ".mp4"]` to `types_of_input_file` and flatten
       - [x] duplicate `converter` to one to import each `ffmpeg_to_[format]` script
         -  for example, there will be a `converter_mp3` that = `ffmpeg_to_libmp3lame_codex`, and a `converter_m4a` that = `ffmpeg_to_aac_codec`
+     -  [ ] skip files that are already in requested format
 
 ### 03
 
@@ -98,9 +99,12 @@ for some reason creating the linux python venv was annoying, so i'm linking how 
 
 ### Extra
 
-  - [ ] make it possible to choose `preset` for encoder speed.
-    - moviepy default is medium.
-    - I'd like to usually use `veryslow`, but other users may not
+  - [x] ~~make it possible to choose [`preset`](https://zulko.github.io/moviepy/reference/reference/moviepy.video.io.ffmpeg_writer.FFMPEG_VideoWriter.html) for encoder speed.~~
+    - ~~moviepy default is medium.~~
+    - ~~I'd like to usually use `veryslow`, but other users may not~~
+    - only applies to videofileclips. cannot be used in [wriitng audio files](https://zulko.github.io/moviepy/reference/reference/moviepy.audio.AudioClip.AudioClip.html#moviepy.audio.AudioClip.AudioClip.write_audiofile).
+  - [ ] One can select a `bitrate`, for the audio equivalent within `write_audiofile(filename, fps=None, nbytes=2, buffersize=2000, codec=None, bitrate=None, ffmpeg_params=None, write_logfile=False, logger='bar')` (you can paste that into a search to jump to the entry on writing audio files.)
+    - optional
 
 - - - - -
 
@@ -110,4 +114,3 @@ for some reason creating the linux python venv was annoying, so i'm linking how 
 
 certain .mp3 files with metadata break moviepy's audiofileclip importer.
 * in the course of trying to deal with htis, I updated moviepy from `moviepy-2.1.2` to `moviepy-2.2.1`.
-* 

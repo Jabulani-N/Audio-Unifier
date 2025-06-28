@@ -60,7 +60,7 @@ def named_aud_to_aac(input_vid_name, output_aud_name,
     # create necessary directories
     os.makedirs(os.path.dirname(out_aud_file), exist_ok=True)
     # save audio as new file
-    orig_audio.write_audiofile(out_aud_file, codec=output_codec)
+    orig_audio.write_audiofile(out_aud_file, codec=output_codec,)
     print("audio file written")
     # close the created clips
     orig_audio.close()
