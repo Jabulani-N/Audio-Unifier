@@ -61,7 +61,7 @@ for some reason creating the linux python venv was annoying, so i'm linking how 
           - if the user wants to additionally extract audio from video files, append `[".mov", ".mp4"]` to `types_of_input_file` and flatten
       - [x] duplicate `converter` to one to import each `ffmpeg_to_[format]` script
         -  for example, there will be a `converter_mp3` that = `ffmpeg_to_libmp3lame_codex`, and a `converter_m4a` that = `ffmpeg_to_aac_codec`
-     -  [ ] skip files that are already in requested format
+     -  [x] skip files that are already in requested format
 
 ### 03
 
