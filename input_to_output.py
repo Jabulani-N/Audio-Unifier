@@ -39,6 +39,8 @@ def extract_from_dir(input_dir="./input/", output_dir="./output/",
     if include_vids:
         for vid_format in vid_formats:
             types_of_input_file.append(vid_format)
+    # makes it not include files that are already correct format
+    types_of_input_file = [item for item in types_of_input_file if item != target_format]
     target_vid_titles = np.array([])
     failed_files = []
     subdirs = list_subdirs(input_dir)
