@@ -87,7 +87,8 @@ for some reason creating the linux python venv was annoying, so i'm linking how 
 
 ### 07
 
- - [ ] ui window to choose new file format
+ - [x] ui window to choose new file format
+
 
 ### 08
 
@@ -107,6 +108,8 @@ for some reason creating the linux python venv was annoying, so i'm linking how 
   - [ ] One can select a `bitrate`, for the audio equivalent within `write_audiofile(filename, fps=None, nbytes=2, buffersize=2000, codec=None, bitrate=None, ffmpeg_params=None, write_logfile=False, logger='bar')` (you can paste that into a search to jump to the entry on writing audio files.)
     - optional
 
+    - [ ] change `pick_desired_format` buttons from [pack](www.pythontutorial.net/tkinter/tkinter-place/) to [place](https://www.pythontutorial.net/tkinter/tkinter-place/) to make them cluster in the center for a potentially cleaner look
+    - [ ] put some [tooltips](https://github.com/gnikit/tkinter-tooltip) on hover over the formats
 - - - - -
 
 ## Bugs
