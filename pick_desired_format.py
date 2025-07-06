@@ -31,18 +31,18 @@ def ask_two_options(box_title="Format selection",
     user_choice = tk.StringVar(value="Cancel")  # Default to "Cancel"
 
     # Label with the message
-    tk.Label(dialog, text=box_text).pack(column=1, pady=25)
+    tk.Label(dialog, text=box_text).pack(side="top", pady=25)
 
     # Buttons for the options
     def select_option(option):
         user_choice.set(option)
         dialog.destroy()  # Close the dialog
 
-    tk.Button(dialog, text=opt1, command=lambda: select_option(opt1)).pack(side="center")
-    tk.Button(dialog, text=opt2, command=lambda: select_option(opt2)).pack(side="center")
-    tk.Button(dialog, text=opt3, command=lambda: select_option(opt3)).grid(side="center")
-    tk.Button(dialog, text=opt4, command=lambda: select_option(opt4)).pack(side="center")
-    tk.Button(dialog, text="Cancel", command=lambda: select_option("cancel")).pack(padx=1, pady=1, row=4, column=1)
+    tk.Button(dialog, text=opt1, command=lambda: select_option(opt1)).pack(side="top")
+    tk.Button(dialog, text=opt2, command=lambda: select_option(opt2)).pack(side="top")
+    tk.Button(dialog, text=opt3, command=lambda: select_option(opt3)).pack(side="top")
+    tk.Button(dialog, text=opt4, command=lambda: select_option(opt4)).pack(side="top")
+    tk.Button(dialog, text="Cancel", command=lambda: select_option("cancel")).pack(side="bottom",padx=1, pady=15)
 
     # Wait for the user to make a selection
     dialog.wait_window()
