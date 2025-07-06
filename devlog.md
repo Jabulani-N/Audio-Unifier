@@ -82,7 +82,7 @@ for some reason creating the linux python venv was annoying, so i'm linking how 
 
 ### 06
 
- - [ ] ui window to choose folder
+ - [x] ui window to choose folder
    - vid2aud has this
 
 ### 07
