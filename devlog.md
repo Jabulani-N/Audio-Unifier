@@ -112,6 +112,7 @@ for some reason creating the linux python venv was annoying, so i'm linking how 
     - [ ] put some [tooltips](https://github.com/gnikit/tkinter-tooltip) on hover over the formats
         - message box basic templates: https://docs.python.org/3/library/tkinter.messagebox.html
         - this worked for some people, but hasn't worked for me, becuase it had issues with None type not having a Bind attribute: https://stackoverflow.com/questions/3221956/how-do-i-display-tooltips-in-tkinter
+          - this seems to be the same? https://pypi.org/project/tkinter-tooltip/
 - - - - -
 
 ## Bugs
