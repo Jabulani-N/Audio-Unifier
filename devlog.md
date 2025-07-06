@@ -113,6 +113,8 @@ for some reason creating the linux python venv was annoying, so i'm linking how 
         - message box basic templates: https://docs.python.org/3/library/tkinter.messagebox.html
         - this worked for some people, but hasn't worked for me, becuase it had issues with None type not having a Bind attribute: https://stackoverflow.com/questions/3221956/how-do-i-display-tooltips-in-tkinter
           - this seems to be the same? https://pypi.org/project/tkinter-tooltip/
+          - https://stackoverflow.com/questions/20399243/display-message-when-hovering-over-something-with-mouse-cursor-in-python
+      - alternative using [HoverInfo](https://jakirkpatrick.wordpress.com/2012/02/01/making-a-hovering-box-in-tkinter/)
 - - - - -
 
 ## Bugs
