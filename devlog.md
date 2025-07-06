@@ -65,18 +65,19 @@ for some reason creating the linux python venv was annoying, so i'm linking how 
 
 ### 03
 
- - [ ] script that recieves a text variable `chosen_output_format` and uses it to append relevant extension (mp3, m4a, etc) to the end of a filename, after removing the extension
+ - [x] script that recieves a text variable `chosen_output_format` and uses it to append relevant extension (mp3, m4a, etc) to the end of a filename, after removing the extension
 
 ### 04
 
- - [ ] script that strips extension from a given filename and returns filename without extension
+ - [x] script that strips extension from a given filename and returns filename without extension
    - vid2aud repo should have a script for this within one of the modules, because we use that funcitonality for creating the audio name
    - this will be used alongside the above scrip that returns the extensionless filename to create the desired final filename
 
 ### 05
 
- - [ ] script that creates final desired filename using extension stripper and extension adder to remove previous file extension and replace it with desired final file etension
+ - [x] script that creates final desired filename using extension stripper and extension adder to remove previous file extension and replace it with desired final file etension
    - check vid2aud repo to see if we have this funciontality already
+   - it's part of input_to_output
 
 
 ### 06
