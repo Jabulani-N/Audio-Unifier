@@ -110,6 +110,8 @@ for some reason creating the linux python venv was annoying, so i'm linking how 
 
     - [ ] change `pick_desired_format` buttons from [pack](www.pythontutorial.net/tkinter/tkinter-place/) to [place](https://www.pythontutorial.net/tkinter/tkinter-place/) to make them cluster in the center for a potentially cleaner look
     - [ ] put some [tooltips](https://github.com/gnikit/tkinter-tooltip) on hover over the formats
+        - message box basics: https://docs.python.org/3/library/tkinter.messagebox.html
+        - this worked for some people, but hasn't worked for me, becuase it had issues with None type not having a Bind attribute: https://stackoverflow.com/questions/3221956/how-do-i-display-tooltips-in-tkinter
 - - - - -
 
 ## Bugs
