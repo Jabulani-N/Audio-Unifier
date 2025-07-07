@@ -93,14 +93,25 @@ for some reason creating the linux python venv was annoying, so i'm linking how 
 
  - [ ] main script to summon the relevant scripts
    - vid2aud has usable format
-   - [ ] pick input folder
-   - [ ] pick output folder
-   - [ ] pick output format
-   - [ ] pick if counting videos
+   - [x] pick input folder
+   - [x] pick output folder
+   - [x] pick output format
+   - [x] pick if counting videos
    - [ ] pass relevant info to input_to_output
+   - [ ] confirmation screen
+     - [ ] tells user their input dir
+     - [ ] tells user output dir
+     - [ ] tells user if they want to convert vids
+     - [ ] allows user to
+       - [ ] start conversion
+       - [ ] start over
+       - [ ] cancel entirely
 
 
 ### Extra
+
+  - [ ] option to copy files that are already correct format from input to output folder
+    - [ ] option to move said files instead
 
   - [x] ~~make it possible to choose [`preset`](https://zulko.github.io/moviepy/reference/reference/moviepy.video.io.ffmpeg_writer.FFMPEG_VideoWriter.html) for encoder speed.~~
     - ~~moviepy default is medium.~~
