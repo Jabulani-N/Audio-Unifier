@@ -17,7 +17,6 @@ Planning space and tasklist.
     - [06](#06)
     - [07](#07)
     - [08](#08)
-    - [09](#09)
     - [Extra](#extra)
   - [Bugs](#bugs)
     - [Current](#current)
@@ -94,10 +93,12 @@ for some reason creating the linux python venv was annoying, so i'm linking how 
 
  - [ ] main script to summon the relevant scripts
    - vid2aud has usable format
+   - [ ] pick input folder
+   - [ ] pick output folder
+   - [ ] pick output format
+   - [ ] pick if counting videos
+   - [ ] pass relevant info to input_to_output
 
-### 09
-
-- [ ] copy format from vid2aud gui to map out remaining steps
 
 ### Extra
 
