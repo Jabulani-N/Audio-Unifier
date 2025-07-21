@@ -99,13 +99,13 @@ for some reason creating the linux python venv was annoying, so i'm linking how 
    - [x] pick if counting videos
    - [ ] pass relevant info to input_to_output
    - [ ] confirmation screen
-     - [ ] tells user their input dir
-     - [ ] tells user output dir
+     - [x] tells user their input dir
+     - [x] tells user output dir
      - [ ] tells user if they want to convert vids
-     - [ ] allows user to
-       - [ ] start conversion
-       - [ ] start over
-       - [ ] cancel entirely
+     - [x] allows user to
+       - [x] start conversion
+       - [x] start over
+       - [x] cancel entirely
 
 
 ### Extra
