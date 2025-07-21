@@ -30,7 +30,8 @@ def run_gui():
     opt1, opt2 = "Start!", "Start Over"
     box_title = "Begin?"
     box_text = "Begin converting media in folder " + folder_input +\
-    "\ninto " + target_format + " files\nin folder " + folder_output + "?"
+    "\ninto " + target_format + " files\nin folder " + folder_output + "?" +\
+    "\n\nProcessing video files as well: " + include_vids
     confirmation = pick_one_of_two(opt1, opt2, box_title, box_text)
     if confirmation == opt1:
         converter_ffmpeg(input_dir=folder_input + "/", output_dir=folder_output + "/",
