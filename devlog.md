@@ -97,7 +97,7 @@ for some reason creating the linux python venv was annoying, so i'm linking how 
    - [x] pick output folder
    - [x] pick output format
    - [x] pick if counting videos
-   - [ ] pass relevant info to input_to_output
+   - [x] pass relevant info to input_to_output
    - [ ] confirmation screen
      - [x] tells user their input dir
      - [x] tells user output dir
