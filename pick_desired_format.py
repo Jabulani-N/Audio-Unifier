@@ -5,8 +5,6 @@ returns selected choice
 """
 
 import tkinter as tk
-from tkinter import messagebox
-import tkinter.ttk as ttk
 
 
 # Create a hidden root window
