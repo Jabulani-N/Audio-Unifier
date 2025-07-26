@@ -18,6 +18,7 @@ Planning space and tasklist.
     - [07](#07)
     - [08](#08)
     - [Extra](#extra)
+  - [Resources](#resources)
   - [Bugs](#bugs)
     - [Current](#current)
 
@@ -128,6 +129,10 @@ for some reason creating the linux python venv was annoying, so i'm linking how 
           - https://stackoverflow.com/questions/20399243/display-message-when-hovering-over-something-with-mouse-cursor-in-python
       - alternative using [HoverInfo](https://jakirkpatrick.wordpress.com/2012/02/01/making-a-hovering-box-in-tkinter/)
 - - - - -
+
+## Resources
+
+[single file spec file changes](https://stackoverflow.com/questions/47143315/using-onefile-with-a-spec-in-pyinstaller)
 
 ## Bugs
 
