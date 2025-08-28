@@ -82,9 +82,9 @@ def extract_from_dir(input_dir="./input/", output_dir="./output/",
         print("type of file name full is", type(vid_name_full))
         failed_files.append(converter(vid_name_full, output_aud_file_name, input_dir, output_dir))
 
-    # if list of failures is empty
-    if not failed_files:
-        print("All conversions were successful!")
+    # if list of failures has no actual failures
+    if all(flag == None for (flag) in failed_files):
+        print("\n\nAll conversions were successful!\n")
     else:
         print("\n\nThe following files failed to be converted and were skipped:\n")
         for failure in failed_files:
