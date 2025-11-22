@@ -11,6 +11,11 @@ pick_one_of_two = __import__('pick_one_of_two').ask_two_options
 converter_ffmpeg = __import__('input_to_output').extract_from_dir
 
 def run_gui():
+    if __name__ == '__main__': print("welcome to Audio Unifier!\n\nYou \
+won't need this terminal,\
+so please take a look at \
+the window with the feather icon \
+to choose which folder you want to convert!")
     folder_input = folder_picker("Which folder do you want to format files from?")
     if not folder_input:
         return
