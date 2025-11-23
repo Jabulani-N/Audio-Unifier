@@ -17,12 +17,12 @@ VSVersionInfo(
           [
             StringStruct('CompanyName', 'Jabulani Ndhlovu'),
             StringStruct('FileDescription', 'Windows version. Converts media files to chosen audio format.'),
-            StringStruct('FileVersion', '1.0.1'),
+            StringStruct('FileVersion', '1.0.1.1'),
             StringStruct('InternalName', 'Audio Unifier'),
             StringStruct('LegalCopyright', '© 2025 Jabulani Ndhlovu'),
             StringStruct('OriginalFilename', 'Audio Unifier - windows.exe'),
             StringStruct('ProductName', 'Audio Unifier'),
-            StringStruct('ProductVersion', '1.0.1')
+            StringStruct('ProductVersion', '1.0.1.1')
           ]
         )
       ]
