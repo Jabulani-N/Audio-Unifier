@@ -14,6 +14,8 @@ def select_stage(dialogue_box_text="Please select a directory"):
 
     # Create a hidden root window
     root = tk.Tk()
+    # assign icon
+    root.iconbitmap('./icon/icon.ico')
     # Hide the root window
     root.withdraw()
 

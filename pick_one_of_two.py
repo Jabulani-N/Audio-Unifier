@@ -9,6 +9,8 @@ from tkinter import messagebox
 
 # Create a hidden root window
 root = tk.Tk()
+# assign icon
+root.iconbitmap('./icon/icon.ico')
 # Hide the main tkinter window
 root.withdraw()
 
