@@ -27,7 +27,7 @@ else:
     # runninng the raw python code
     application_path ='./icon/'
 
-application_path ='./icon/'
+# application_path ='./icon/'
 icon_path = os.path.join(application_path, 'icon.ico')
 root.iconbitmap(default=icon_path )
 # Hide the main tkinter window
