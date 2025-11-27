@@ -10,7 +10,7 @@ import tkinter as tk
 # Create a hidden root window
 root = tk.Tk()
 # assign icon
-root.iconbitmap('./icon/icon.ico')
+root.iconbitmap(default='./icon/icon.ico')
 # Hide the main tkinter window
 root.withdraw()
 
