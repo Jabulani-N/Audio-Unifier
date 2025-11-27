@@ -5,12 +5,25 @@ returns selected choice
 """
 
 import tkinter as tk
+import sys
+import os
 
 
 # Create a hidden root window
 root = tk.Tk()
 # assign icon
-root.iconbitmap(default='./icon/icon.ico')
+
+# these aren't portable
+# if getattr(sys, 'frozen', False):
+#     # bundled as executable
+#     application_path = sys._MEIPASS
+# else:
+#     # runninng the raw python code
+#     application_path ='./icon/'
+
+application_path ='./icon/'
+icon_path = os.path.join(application_path, 'icon.ico')
+root.iconbitmap(default=icon_path )
 # Hide the main tkinter window
 root.withdraw()
 
