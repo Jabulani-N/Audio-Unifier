@@ -10,7 +10,23 @@ from tkinter import messagebox
 # Create a hidden root window
 root = tk.Tk()
 # assign icon
-root.iconbitmap('./icon/icon.ico')
+# root.iconbitmap('./icon/icon.ico')
+if getattr(sys, 'frozen', False):
+    # bundled as executable
+    # application_path = './icon/'
+    try:
+        application_path = sys._MEIPASS
+    except AttributeError:
+        application_path = os.path.abspath(".")
+
+else:
+    # runninng the raw python code
+    application_path ='./icon/'
+
+# application_path ='./icon/'
+# print("application path is: \n", application_path)
+icon_path = os.path.join(application_path, 'icon.ico')
+root.iconbitmap(default=icon_path)
 # Hide the main tkinter window
 root.withdraw()
 

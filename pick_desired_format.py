@@ -22,14 +22,20 @@ root = tk.Tk()
 #     application_path ='./icon/'
 if getattr(sys, 'frozen', False):
     # bundled as executable
-    application_path = './'
+    # application_path = './icon/'
+    try:
+        application_path = sys._MEIPASS
+    except AttributeError:
+        application_path = os.path.abspath(".")
+
 else:
     # runninng the raw python code
     application_path ='./icon/'
 
 # application_path ='./icon/'
+print("application path is: \n", application_path)
 icon_path = os.path.join(application_path, 'icon.ico')
-root.iconbitmap(default=icon_path )
+root.iconbitmap(default=icon_path)
 # Hide the main tkinter window
 root.withdraw()
 
