@@ -6,6 +6,8 @@ returns selected choice
 
 import tkinter as tk
 from tkinter import messagebox
+import sys
+import os
 
 # Create a hidden root window
 root = tk.Tk()
@@ -26,7 +28,7 @@ else:
 # application_path ='./icon/'
 # print("application path is: \n", application_path)
 icon_path = os.path.join(application_path, 'icon.ico')
-root.iconbitmap(default=icon_path)
+root.iconbitmap(icon_path)
 # Hide the main tkinter window
 root.withdraw()
 

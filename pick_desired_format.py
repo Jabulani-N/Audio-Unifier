@@ -33,7 +33,7 @@ else:
     application_path ='./icon/'
 
 # application_path ='./icon/'
-print("application path is: \n", application_path)
+# print("application path is: \n", application_path)
 icon_path = os.path.join(application_path, 'icon.ico')
 root.iconbitmap(default=icon_path)
 # Hide the main tkinter window
