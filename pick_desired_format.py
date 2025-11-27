@@ -20,6 +20,12 @@ root = tk.Tk()
 # else:
 #     # runninng the raw python code
 #     application_path ='./icon/'
+if getattr(sys, 'frozen', False):
+    # bundled as executable
+    application_path = './'
+else:
+    # runninng the raw python code
+    application_path ='./icon/'
 
 application_path ='./icon/'
 icon_path = os.path.join(application_path, 'icon.ico')
