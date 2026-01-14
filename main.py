@@ -44,6 +44,16 @@ to choose which folder you want to convert!")
                      target_format=target_format, include_vids=include_vids)
     elif confirmation == opt2:
         run_gui()
+    # at this point, the program has just either started over or finished conversion
+    opt1, opt2 = "Convert Again", "Close"
+    box_title = "Conversion Finished!"
+    box_text = "Convert something else, or close?"
+    run_again_decision = pick_one_of_two(opt1, opt2, box_title, box_text)
+    if run_again_decision == opt1:
+        run_gui()
+    else:
+        #close
+        return
 
 if __name__ == '__main__':
     run_gui()
