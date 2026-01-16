@@ -30,7 +30,7 @@ root.iconbitmap(icon_path)
 root.withdraw()
 
 # Function to display a custom dialog box with three options
-def ask_two_options(opt1="1", opt2="2",box_title="Choose an Option",
+def ask_two_options(opt1="1", opt2=None,box_title="Choose an Option",
                     box_text = "Please select one of the following options:"):
     # Create a new top-level window for the dialog
     dialog = tk.Toplevel(root)
@@ -50,7 +50,8 @@ def ask_two_options(opt1="1", opt2="2",box_title="Choose an Option",
         dialog.destroy()  # Close the dialog
 
     tk.Button(dialog, text=opt1, command=lambda: select_option(opt1)).pack(pady=5)
-    tk.Button(dialog, text=opt2, command=lambda: select_option(opt2)).pack(pady=5)
+    if opt2:
+        tk.Button(dialog, text=opt2, command=lambda: select_option(opt2)).pack(pady=5)
     tk.Button(dialog, text="Cancel", command=lambda: select_option("cancel")).pack(pady=5)
 
     # Wait for the user to make a selection

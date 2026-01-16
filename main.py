@@ -18,19 +18,21 @@ so please take a look at \
 the window \
 to choose which folder you want to convert!")
     folder_input = folder_picker("Which folder do you want to format files from?")
-    if not folder_input:
+    if folder_input == "Cancel":
         return
     folder_output = folder_picker("Where do you want to place converted files?")
     if not folder_output:
         return
     # user selects target format
     target_format = format_picker()
+    if not target_format:
+        return
     opt1, opt2 = "Yes", "No"
     box_title = "Include Video files?"
     box_text = "Do you want to convert videos as well?"
     include_vids = pick_one_of_two(opt1, opt2,
                                    box_title, box_text)
-    if include_vids == "Cancel":
+    if not include_vids:
         return
     # run converter based on selections made
     opt1, opt2 = "Start!", "Start Over"
@@ -44,15 +46,16 @@ to choose which folder you want to convert!")
                      target_format=target_format, include_vids=include_vids)
     elif confirmation == opt2:
         run_gui()
+    else:
+        return
     # at this point, the program has just either started over or finished conversion
-    opt1, opt2 = "Convert Again", "Close"
+    opt1, opt2 = "Convert Again", None
     box_title = "Conversion Finished!"
     box_text = "Convert something else, or close?"
     run_again_decision = pick_one_of_two(opt1, opt2, box_title, box_text)
     if run_again_decision == opt1:
         run_gui()
     else:
-        #close
         return
 
 if __name__ == '__main__':
