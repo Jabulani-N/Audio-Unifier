@@ -77,10 +77,13 @@ def extract_from_dir(input_dir="./input/", output_dir="./output/",
     for vid_name_full in target_vid_titles:
         vid_name_stem = Path(vid_name_full).stem
         output_aud_file_name = vid_name_stem + target_format
-        print("sending '", vid_name_full, "' in '", input_dir, "' to", converter)
-        print("to ask", converter, "to make '", output_aud_file_name, "' in", output_dir)
-        print("type of file name full is", type(vid_name_full))
-        failed_files.append(converter(vid_name_full, output_aud_file_name, input_dir, output_dir))
+        if Path(output_dir + output_aud_file_name).exists():
+            print(output_dir + output_aud_file_name," already exists, so it is skipped")
+        else:
+            print("sending '", vid_name_full, "' in '", input_dir, "' to", converter)
+            print("to ask", converter, "to make '", output_aud_file_name, "' in", output_dir)
+            print("type of file name full is", type(vid_name_full))
+            failed_files.append(converter(vid_name_full, output_aud_file_name, input_dir, output_dir))
 
     # if list of failures has no actual failures
     if all(flag == None for (flag) in failed_files):
