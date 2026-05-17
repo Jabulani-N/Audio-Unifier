@@ -21,6 +21,7 @@ from moviepy import AudioFileClip
 from moviepy import VideoFileClip
 import os
 import sys
+assign_metadata = __import__('metadata_manipulator').metadata_mp3_to_m4a
 
 
 def named_aud_to_aac(input_vid_name, output_aud_name,
@@ -64,7 +65,10 @@ def named_aud_to_aac(input_vid_name, output_aud_name,
     print("audio file written")
     # close the created clips
     orig_audio.close()
-    print("AudioFileClip file closed")
+    print("AudioFileClip file closed.")
+    # transfer metadata from mp3 to m4a
+    print("transferring metadata...")
+    assign_metadata(in_aud_file, out_aud_file)
 
 
 if __name__ == '__main__':
