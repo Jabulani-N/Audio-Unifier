@@ -10,7 +10,7 @@ different formats have different modules
 
 import mutagen
 
-def retrieve_metadata_mp3(source_address):
+def retrieve_metadata(source_address):
     """
     returns a list filled with metadata
     """
@@ -18,12 +18,15 @@ def retrieve_metadata_mp3(source_address):
     meta_list = []
     # go through all present metadata
     for key, value in source_audio.items():
-        # debug print
-        # print("time to find some metadata!")
-        # print(f"{key}: {value}")
         meta_list.append([key, value])
     return meta_list
 
+def assign_metadata(source_address, meta_list):
+    """
+    remakes the file source_address
+    but containing metadata from meta_list
+    """
+    return
 
 if __name__ == '__main__':
     # test mode
@@ -31,4 +34,4 @@ if __name__ == '__main__':
 \nyou'll be prompted to enter a mp3 file to list metadata\
 \n\nGood luck!")
     source_audio = input("what file do you wanna investigate?")
-    print(retrieve_metadata_mp3(source_audio))
+    print(retrieve_metadata(source_audio))
