@@ -61,7 +61,6 @@ def metadata_mp3_to_m4a(source_mp3_address, recieving_m4a):
             current_mp3_content = src_mp3_tags.get(mp3_tag)
             # mp3 uses text tack/total
             # MP4 uses tuple (track, total)
-            print("assigning tag:", m4a_tag)
             if mp3_tag in ("tracknumber", "disknumber"):
                 #text formatting
                 try:
@@ -69,8 +68,18 @@ def metadata_mp3_to_m4a(source_mp3_address, recieving_m4a):
                     target_m4a[m4a_tag] = [(int(content_parts[0]) or 0), (int(content_parts[1] or 0))]
                 except Exception:
                     print("failed to assign tag", m4a_tag, "from", mp3_tag)
+                    try:
+                        print("attempting to use the raw content", int(current_mp3_content[0]), "as", m4a_tag, "...")
+                        target_m4a[m4a_tag] = (int(current_mp3_content[0]), 0)
+                    except Exception as the_problem:
+                        print("failed to use the raw content", current_mp3_content, "as", m4a_tag)
+                        print("because of exception:", the_problem)
             else:
+                print("assigning tag:", m4a_tag, "\nfrom tag:", mp3_tag)
+                print("the mp3's", mp3_tag, "is", current_mp3_content)
                 target_m4a[m4a_tag] = current_mp3_content
+    # actually save the changes you made
+    target_m4a.save()
 
 if __name__ == '__main__':
     # test mode
