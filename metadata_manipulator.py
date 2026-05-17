@@ -8,27 +8,9 @@ of an audio file
 different formats have different modules
 """
 
-import mutagen
 from mutagen.mp4 import MP4
 from mutagen.easyid3 import EasyID3
 
-def retrieve_metadata(source_address):
-    """
-    returns a list filled with metadata
-    """
-    source_audio=mutagen.File(source_address)
-    meta_list = []
-    # go through all present metadata
-    for key, value in source_audio.items():
-        meta_list.append([key, value])
-    return meta_list
-
-def assign_metadata(source_address, meta_list):
-    """
-    remakes the file source_address
-    but containing metadata from meta_list
-    """
-    return
 
 def metadata_mp3_to_m4a(source_mp3_address, recieving_m4a):
     """
@@ -66,14 +48,15 @@ def metadata_mp3_to_m4a(source_mp3_address, recieving_m4a):
                 try:
                     content_parts = current_mp3_content[0].split("/")
                     target_m4a[m4a_tag] = [(int(content_parts[0]) or 0), (int(content_parts[1] or 0))]
-                except Exception:
+                except Exception as tagging_problem:
                     print("failed to assign tag", m4a_tag, "from", mp3_tag)
                     try:
                         print("attempting to use the raw content", int(current_mp3_content[0]), "as", m4a_tag, "...")
-                        target_m4a[m4a_tag] = (int(current_mp3_content[0]), 0)
-                    except Exception as the_problem:
+                        target_m4a[m4a_tag] = [(int(current_mp3_content[0]), 0)]
+                    except Exception as raw_tag_problem:
                         print("failed to use the raw content", current_mp3_content, "as", m4a_tag)
-                        print("because of exception:", the_problem)
+                        print("because of exception:", raw_tag_problem)
+                    print("tag assignment failure due to exception ", tagging_problem)
             else:
                 print("assigning tag:", m4a_tag, "\nfrom tag:", mp3_tag)
                 print("the mp3's", mp3_tag, "is", current_mp3_content)
