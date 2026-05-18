@@ -1,6 +1,6 @@
 VSVersionInfo(
   ffi=FixedFileInfo(
-    filevers=(2, 0, 1, 1),  # File version: Major, Minor, Build, Revision
+    filevers=(3, 0, 0, 0),  # File version: Major, Minor, Build, Revision
     prodvers=(3, 0, 0, 0),  # Product version
     mask=0x3f,
     flags=0x0,
@@ -17,12 +17,12 @@ VSVersionInfo(
           [
             StringStruct('CompanyName', 'Jabulani Ndhlovu'),
             StringStruct('FileDescription', 'Windows version. Converts media files to chosen audio format.'),
-            StringStruct('FileVersion', '2.0.0.0'),
+            StringStruct('FileVersion', '3.0.0.0'),
             StringStruct('InternalName', 'Audio Unifier'),
             StringStruct('LegalCopyright', '© 2025 Jabulani Ndhlovu'),
             StringStruct('OriginalFilename', 'Audio Unifier - windows.exe'),
             StringStruct('ProductName', 'Audio Unifier'),
-            StringStruct('ProductVersion', '2.0.0.0')
+            StringStruct('ProductVersion', '3.0.0.0')
           ]
         )
       ]

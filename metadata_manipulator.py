@@ -56,7 +56,7 @@ def metadata_mp3_to_m4a(source_mp3_address, recieving_m4a):
                     except Exception as raw_tag_problem:
                         print("failed to use the raw content", current_mp3_content, "as", m4a_tag)
                         print("because of exception:", raw_tag_problem)
-                    print("tag assignment failure due to exception ", tagging_problem)
+                    # print("tag assignment failure due to exception ", tagging_problem)
             else:
                 print("assigning tag:", m4a_tag, "\nfrom tag:", mp3_tag)
                 print("the mp3's", mp3_tag, "is", current_mp3_content)
@@ -66,8 +66,4 @@ def metadata_mp3_to_m4a(source_mp3_address, recieving_m4a):
 
 if __name__ == '__main__':
     # test mode
-    print("you are running a test for metadata_manipulator!\
-\nyou'll be prompted to enter a mp3 file to list metadata\
-\n\nGood luck!")
-    source_audio = input("what file do you wanna investigate?")
-    print(retrieve_metadata(source_audio))
+    pass
