@@ -1,3 +1,6 @@
+# venv
+*venv*/*
+
 # script related
 junk/*
 input/*
@@ -36,7 +39,8 @@ MANIFEST
 #  Usually these files are written by a python script from a template
 #  before PyInstaller builds the exe, so as to inject date/other infos into it.
 *.manifest
-*.spec
+# *.spec
+# i'm keeping the spec file because it is so finicky
 
 # Installer logs
 pip-log.txt

@@ -16,7 +16,7 @@ file names required.
 default directories exist, but should be specified when used.
 """
 
-import moviepy
+# import moviepy
 from moviepy import AudioFileClip
 import os
 import sys
